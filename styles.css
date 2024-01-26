@@ -1,0 +1,65 @@
+html{
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+header {
+    padding: 5px;
+    height: 20px;
+    border-top: 2px dashed white;
+    border-bottom: 2px dashed white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    height: 25px;
+}
+
+body {
+    margin: 0;
+    padding: none;
+    background-color: black;
+    padding: 3rem;
+}
+
+section{
+    width: 33%;
+    
+    padding: 0 3rem 0 3rem;
+}
+
+main{
+    width: 100%;
+    display: flex;
+}
+
+.yellow{
+    color: #FCEE21;
+}
+
+.green{
+    color: green;
+}
+
+.pink{
+    color: #FF00FF;
+}
+
+.blue{
+    color: #00FFFF;
+}
+
+.container{
+    margin: 2rem 0;
+}
+
+.container > * {
+    margin: 6px 0px 6px 0px;
+}
+
+.banner{
+    border-bottom: 2px dashed white;
+}
+
