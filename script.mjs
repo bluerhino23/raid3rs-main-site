@@ -49,26 +49,40 @@ const projectNames = Array.from(document.querySelectorAll('.projectName'))
 //Displaying clicked project second column
 
 const projectHeading = document.getElementById('project-heading');
-const projectContract = document.getElementById('contract')
+const projectContract = document.getElementById('contract');
+const projectReadiness = document.getElementById('project-readiness');
 
 projectNames.forEach(elm => { //activates when a project name gets clicked in first column
     elm.addEventListener('click' , handleProjectClick)
 })
 
 function handleProjectClick (e){
+    const clickedProject = projects.filter(project => project.name === e.target.textContent)[0];
 
-    const existingSpan = projectContract.querySelector('span');
-    if (existingSpan) { //removes previous contracts
+    if(clickedProject.completed){
+        projectReadiness.textContent = "(completed)"
+        projectReadiness.classList.add('green')
+    } else {
+        projectReadiness.textContent = "(cooking)"
+        projectReadiness.classList.add('pink')
+    }
+
+    const existingSpan = projectContract.querySelector('a');
+    if (existingSpan) { //removes previous contracts being displayed
         projectContract.removeChild(existingSpan);
     }
 
-    const contract = document.createElement('span')
+    const contract = document.createElement('a')
+    contract.setAttribute('href', `${clickedProject.solscan}` ); // Replace with your actual link
+    contract.setAttribute('target', '_blank');
+    contract.style.textDecoration = "underline"
+    contract.style.color = "white"
 
     secondColumnElms.forEach(elm => { //displays second column
         elm.style.display = "block"
     })
 
-    const clickedProject = projects.filter(project => project.name === e.target.textContent)[0];
+    
     contract.textContent = shortenContract(clickedProject.contract)
     
     projectContract.appendChild(contract)
@@ -78,10 +92,8 @@ function handleProjectClick (e){
 //utilites 
 
 function shortenContract(contract){
-    let shorten;
     const start = contract.slice(0,4)
     const last = contract.slice(-4)
-    shorten = `${start}...${last}`
-    return shorten
+    return `${start}...${last}`
 }
 
