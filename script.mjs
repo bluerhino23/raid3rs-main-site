@@ -61,10 +61,10 @@ function handleProjectClick (e){
 
     if(clickedProject.completed){
         projectReadiness.textContent = "(completed)"
-        projectReadiness.classList.add('green')
+        projectReadiness.style.color = "green"
     } else {
         projectReadiness.textContent = "(cooking)"
-        projectReadiness.classList.add('pink')
+        projectReadiness.style.color = "#FF00FF"
     }
 
     const existingSpan = projectContract.querySelector('a');
