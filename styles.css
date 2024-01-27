@@ -53,6 +53,12 @@ main{
 
 .container{
     margin: 2rem 0;
+    list-style: none;
+    padding: 0;
+}
+
+.container li{
+    margin: 6px 0;
 }
 
 .container > * {
@@ -61,5 +67,17 @@ main{
 
 .banner{
     border-bottom: 2px dashed white;
+    padding-bottom: 2rem;
 }
 
+.two{
+    display: none;
+}
+
+.divisor{
+    border: 1px solid white;
+}
+
+.second{
+    display: none;
+}

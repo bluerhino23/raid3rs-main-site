@@ -8,19 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <script type="module" src="./script.mjs" defer></script>
 </head>
 <body>
     <main>
-        <section>
+        <section >
             <header>
                 <img class="logo" src="/assets/skull-raid.svg" alt="raid3rs logo">
                 <p>Raid3rs</p>
             </header>
             <p style="text-decoration: underline;">Projects</p>
-            <div class="container">
-                <p><a class="yellow">$DICKBUTT</a>, <span class="green">(Complete)</span></p>
-                <p><span class="yellow">$XXXXXXXXXXX</span>, <span class="pink">(Cooking...)</span></p>
-            </div>
+            <ul id="project-container" class="container">
+            </ul>
             <p style="text-decoration: underline;">Links</p>
             <div class="container">
                 <p>[Twitter] (<span class="blue">@weareraid3rs</span>)</p>
@@ -28,17 +27,25 @@
                 <p>[Email] (<span class="blue">yo@raid3rs.org</span>)</p>
             </div>
         </section>
-        <section>
+        <div class="divisor second"></div>
+        <section class="second">
             <header>
-                <img class="logo" src="/assets/skull-raid.svg" alt="raid3rs logo">
-                <p><span id="project-heading">$DICKBUTT</span> <span id="project-readiness" class="green">(complete)</span></p> 
+                <p><span class="yellow" id="project-heading">$DICKBUTT</span> <span id="project-readiness" class="green">(complete)</span></p> 
             </header>
             <div class="banner container">
-                <p>- Contract: <a>000...000</a> <span class="pink">[.]</span></p>
+                <p id="contract">- Contract: <a>000...000</a> <span class="pink">[.]</span></p>
                 <p>- Contract Renounced <span class="pink">[.]</span></p>
                 <p>- Liquidity Burnt <span class="pink">[.]</span></p>
             </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perspiciatis accusamus, porro velit voluptatum quisquam necessitatibus! Repellendus amet....</p>
+            <p style="text-decoration: underline;">Links</p>
+            <div class="container">
+                <p>[Twitter] (<span class="blue">@weareraid3rs</span>)</p>
+                <p>[Telegram] (<span class="blue">@weareraid3rs</span>)</p>
+                <p>[Email] (<span class="blue">yo@raid3rs.org</span>)</p>
+            </div>
         </section>
+        <div class="divisor second"></div>
         <section></section>
     </main>
 </body>
