@@ -59,6 +59,10 @@ projectNames.forEach(elm => { //activates when a project name gets clicked in fi
 function handleProjectClick (e){
     const clickedProject = projects.filter(project => project.name === e.target.textContent)[0];
 
+    if (!clickedProject.clickable) {
+        return
+    }
+
     if(clickedProject.completed){
         projectReadiness.textContent = "(completed)"
         projectReadiness.style.color = "green"
