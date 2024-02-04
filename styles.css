@@ -24,8 +24,11 @@ body {
     margin: 0;
     background-color: black;
     padding: 3rem 6rem;
-    min-height: 100vh;
+    min-height: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 section{
@@ -36,7 +39,6 @@ main{
     width: 100%;
     display: flex;
     gap: 3rem;
-    
 }
 
 .yellow{
@@ -53,7 +55,11 @@ main{
 
 .blue{
     color: #00FFFF;
-    
+    text-decoration: none;
+}
+
+.blue:hover{
+    text-decoration: underline;
 }
 
 .container{

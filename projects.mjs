@@ -7,7 +7,7 @@ const projects = [
         liqudityBurnt: '1000',
         completed: false,
         solscan:"https://solscan.io/token/3D1b7HXDgYTipeCyp73Zcw2tGkdCMe4j8wKSPjvTZMSk",
-        clickable: true,
+        clickable: false,
         links: {
             twitter: ""
         }
